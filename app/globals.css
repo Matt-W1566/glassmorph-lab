@@ -14,7 +14,11 @@
 
 @layer utilities {
   .glass-container {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(173, 173, 173, 0.1) 100%
+    );
     backdrop-filter: blur(10px);
     border-radius: 32px;
     padding: 20px;
