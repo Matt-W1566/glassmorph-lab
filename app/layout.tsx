@@ -1,3 +1,4 @@
+// app/layout.tsx
 import { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/app/globals.css";
@@ -19,14 +20,14 @@ const roboto = localFont({
 
 const fira = localFont({
   src: [
-    { path: "./fonts/FiraMono-Regular.ttf", weight: "100", style: "normal" },
+    { path: "./fonts/FiraMono-Regular.ttf", weight: "400", style: "normal" },
   ],
   variable: "--font-fira",
 });
 
 export const metadata: Metadata = {
   title: "Glassmorphism Lab",
-  description: "The place to test glassmorphism",
+  description: "Create and customize glassmorphism UI elements",
 };
 
 export default function RootLayout({
@@ -36,7 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable}`}>{children}</body>
+      <body className={`${roboto.variable} ${fira.variable} font-sans`}>
+        {children}
+      </body>
     </html>
   );
 }
