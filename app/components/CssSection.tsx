@@ -1,20 +1,55 @@
+"use client";
+
 import GlassSection from "@/app/components/GlassSection";
 import CopyButton from "@/app/components/CopyButton";
+import { useEffect, useState } from "react";
 
 export default function CssSection() {
-  const cssCode = `background: rgba(255, 255, 255, 0.15
-backdrop-filter: blur(6px);
--webkit-backdrop-filter: blur(10px);
-border-radius: 14px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-border: 1px solid rgba(255, 255, 255, 0.3);`;
+  const [cssCode, setCssCode] = useState("");
 
-  // all variables --glass-opacity, --color-rgb, --glass-opacity, --glass-blur, --glass-shadow-size, --glass-shadow-opacity, (--glass-border-width, --glass-border-opacity
+  const updateCssCode = () => {
+    const root = document.documentElement.style;
+
+    const color =
+      root.getPropertyValue("--color-rgb").trim() || "255, 255, 255";
+    const opacity = root.getPropertyValue("--glass-opacity").trim() || "0.15";
+    const blur = root.getPropertyValue("--glass-blur").trim() || "6px";
+    const shadowSize =
+      root.getPropertyValue("--glass-shadow-size").trim() || "0 4px 30px";
+    const shadowOpacity =
+      root.getPropertyValue("--glass-shadow-opacity").trim() || "0.25";
+    const borderWidth =
+      root.getPropertyValue("--glass-border-width").trim() || "1px";
+    const borderOpacity =
+      root.getPropertyValue("--glass-border-opacity").trim() || "0.3";
+
+    return `background: rgba(${color}, ${opacity});
+backdrop-filter: blur(${blur});
+-webkit-backdrop-filter: blur(${blur});
+border-radius: 14px;
+box-shadow: ${shadowSize} rgba(0, 0, 0, ${shadowOpacity});
+border: ${borderWidth} solid rgba(${color}, ${borderOpacity});`;
+  };
+
+  useEffect(() => {
+    setCssCode(updateCssCode());
+
+    const observer = new MutationObserver(() => {
+      setCssCode(updateCssCode());
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["style"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <GlassSection title="CSS">
       <div className="glass-2 w-full !rounded-[var(--radius-md)] mb-[14px] select-all overflow-x-auto">
-        <pre className="font-[fira] text-sm sm:text-base leading-5">
+        <pre className="font-[fira] text-sm sm:text-base leading-5 whitespace-pre-wrap">
           {cssCode}
         </pre>
       </div>

@@ -29,7 +29,7 @@
       var(--glass-shadow-size, 40px)
       rgba(0, 0, 0, var(--glass-shadow-opacity, 0.25));
     border: var(--glass-border-width, 1px) solid
-      rgba(255, 255, 255, var(--glass-border-opacity, 0.3));
+      rgba(var(--color-rgb, 255, 255, 255), var(--glass-border-opacity, 0.3));
   }
 
   .glass-2 {
@@ -44,7 +44,7 @@
       var(--glass-shadow-size, 40px)
       rgba(0, 0, 0, var(--glass-shadow-opacity, 0.25));
     border: var(--glass-border-width, 1px) solid
-      rgba(255, 255, 255, var(--glass-border-opacity, 0.3));
+      rgba(var(--color-rgb, 255, 255, 255), var(--glass-border-opacity, 0.3));
   }
 }
 
