@@ -6,8 +6,9 @@
   --radius-sm: calc(40px - 28px);
 }
 
-::selection {
-  background: rgba(70, 40, 150, 0.75);
+::selection,
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.35);
 }
 
 @layer utilities {

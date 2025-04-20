@@ -69,7 +69,7 @@ export default function Home() {
             </form>
           </div>
 
-          <div className="glass flex-1 flex flex-col items-center justify-center m-2 h-fit w-full max-w-[500px]">
+          <div className="glass flex-1 flex flex-col items-center justify-center m-2 sm:mb-18 h-fit w-full max-w-[500px]">
             <div className="glass-2 flex items-center justify-center w-full !rounded-[var(--radius-md)] !h-[54.13px] !p-0 mb-[14px] text-center">
               CSS
             </div>
