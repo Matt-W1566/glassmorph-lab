@@ -1,5 +1,5 @@
-import backgroundPicture from "../public/background.jpg";
-import Slider from "./components/Slider";
+import backgroundPicture from "@/public/background.jpg";
+import Slider from "@/app/components/Slider";
 
 export default function Home() {
   return (
