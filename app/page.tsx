@@ -1,13 +1,20 @@
 import backgroundPicture from "@/public/background.jpg";
 import Slider from "@/app/components/Slider";
+import GlassSection from "@/app/components/GlassSection";
 
 export default function Home() {
   return (
     <div
       className="min-h-screen w-full flex flex-col bg-cover bg-center items-center justify-center overflow-x-hidden"
-      style={{
-        backgroundImage: `url(${backgroundPicture.src})`,
-      }}
+      style={
+        {
+          backgroundImage: `url(${backgroundPicture.src})`,
+          "--glass-opacity": null,
+          "--glass-blur": null, // NEEDS PX
+          "--glass-shadow-opacity": null,
+          "--glass-border-width": null, // NEEDS PX
+        } as React.CSSProperties
+      }
     >
       <div className="flex flex-col xl:flex-row flex-wrap items-center justify-center w-full gap-16 xl:gap-30 px-4 lg:pt-10">
         <div className="w-full flex justify-center">
@@ -31,10 +38,7 @@ export default function Home() {
         </div>
 
         <section className="flex flex-col xl:flex-row w-full gap-16 justify-center items-center text-white font-bold text-4xl">
-          <div className="glass flex-1 flex flex-col items-center justify-center m-2 h-fit w-full max-w-[500px]">
-            <div className="glass-2 flex items-center justify-center w-full !rounded-[var(--radius-md)] !p-1.5 mb-[14px]">
-              Settings
-            </div>
+          <GlassSection title="Settings">
             <form className="glass-2 flex flex-col w-full text-xl !rounded-[var(--radius-md)] p-4">
               <div>Colour</div>
               <Slider
@@ -67,12 +71,9 @@ export default function Home() {
                 defaultVal="0.25"
               />
             </form>
-          </div>
+          </GlassSection>
 
-          <div className="glass flex-1 flex flex-col items-center justify-center m-2 sm:mb-18 h-fit w-full max-w-[500px]">
-            <div className="glass-2 flex items-center justify-center w-full !rounded-[var(--radius-md)] !h-[54.13px] !p-0 mb-[14px] text-center">
-              CSS
-            </div>
+          <GlassSection title="CSS">
             <div className="glass-2 w-full !rounded-[var(--radius-md)] mb-[14px] select-all overflow-x-auto">
               <pre className="font-[fira] text-sm sm:text-base leading-5">
                 background: rgba(255, 255, 255, 0.15);
@@ -109,7 +110,7 @@ export default function Home() {
                 </g>
               </svg>
             </button>
-          </div>
+          </GlassSection>
         </section>
       </div>
     </div>
