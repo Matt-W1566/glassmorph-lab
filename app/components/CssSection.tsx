@@ -1,11 +1,7 @@
-"use client";
-
 import GlassSection from "@/app/components/GlassSection";
 import CopyButton from "@/app/components/CopyButton";
 
 export default function CssSection() {
-  const root = document.documentElement.style;
-
   const cssCode = `background: rgba(255, 255, 255, 0.15
 backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(10px);
