@@ -35,6 +35,7 @@ export default function Slider() {
       <div className="flex justify-between mb-1">
         <span>Colour</span>
       </div>
+      
       <input
         type="color"
         value={value}
