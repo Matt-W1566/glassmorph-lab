@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import backgroundPicture from "@/public/background.jpg";
 
 export default function GlobalError({
   error,
@@ -13,7 +12,7 @@ export default function GlobalError({
     <html>
       <body className="min-h-screen w-full flex flex-col items-center justify-center overflow-hidden relative bg-black/70">
         <Image
-          src={backgroundPicture}
+          src="/background.jpg"
           alt="Error Background"
           fill
           priority
