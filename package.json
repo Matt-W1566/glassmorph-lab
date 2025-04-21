@@ -15,6 +15,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss-animate": "^1.0.7",
+    "touch-cli": "^0.0.1",
     "typography": "^0.16.24"
   },
   "devDependencies": {

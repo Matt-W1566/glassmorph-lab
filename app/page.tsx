@@ -1,13 +1,14 @@
 import Image from "next/image";
-import SliderSection from "@/app/components/SliderSection";
-import CssSection from "@/app/components/CssSection";
-import Title from "@/app/components/Title";
+import backgroundPicture from "../public/background.jpg";
+import SliderSection from "./components/SliderSection";
+import CssSection from "./components/CssSection";
+import Title from "./components/Title";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center overflow-x-hidden relative">
       <Image
-        src="/background.jpg"
+        src={backgroundPicture}
         alt="Background"
         fill
         priority

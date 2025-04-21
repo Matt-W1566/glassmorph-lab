@@ -1,7 +1,7 @@
 // app/layout.tsx
 import { Metadata } from "next";
 import localFont from "next/font/local";
-import "@/app/globals.css";
+import "./globals.css";
 
 const roboto = localFont({
   src: [
