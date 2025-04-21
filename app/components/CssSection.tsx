@@ -23,12 +23,25 @@ export default function CssSection() {
     const borderOpacity =
       root.getPropertyValue("--glass-border-opacity").trim() || "0.3";
 
-    return `background: rgba(${color}, ${opacity});
-backdrop-filter: blur(${blur});
--webkit-backdrop-filter: blur(${blur});
+    let styles = `background: rgba(${color}, ${opacity});
 border-radius: 14px;
-box-shadow: ${shadowSize} rgba(0, 0, 0, ${shadowOpacity});
-border: ${borderWidth} solid rgba(${color}, ${borderOpacity});`;
+`;
+
+    if (blur !== "0px") {
+      styles += `backdrop-filter: blur(${blur});
+-webkit-backdrop-filter: blur(${blur});
+`;
+    }
+
+    if (shadowSize !== "0px" && shadowOpacity !== "0") {
+      styles += `box-shadow: ${shadowSize} rgba(0, 0, 0, ${shadowOpacity});`;
+    }
+
+    if (borderWidth !== "0px") {
+      styles += `border: ${borderWidth} solid rgba(${color}, ${borderOpacity});`;
+    }
+
+    return styles;
   };
 
   useEffect(() => {
