@@ -38,7 +38,8 @@ border-radius: 14px;
     }
 
     if (borderWidth !== "0px") {
-      styles += `border: ${borderWidth} solid rgba(${color}, ${borderOpacity});`;
+      styles += `
+border: ${borderWidth} solid rgba(${color}, ${borderOpacity});`;
     }
 
     return styles;

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Title() {
   return (
     <div className="w-full flex justify-center">

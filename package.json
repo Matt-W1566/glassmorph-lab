@@ -2,7 +2,7 @@
   "name": "glassmorph-lab",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://matt-w1566.github.io/glassmorph-lab/",
+  "homepage": "https://matt-w1566.github.io/glassmorph-lab",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
