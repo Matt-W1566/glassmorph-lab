@@ -6,10 +6,11 @@ const repoName = "glassmorph-lab";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: isProd ? `/${repoName}` : "",
-  assetPrefix: isProd ? `/${repoName}/` : "",
+  assetPrefix: isProd ? `/${repoName}` : "",
   images: {
     unoptimized: true,
   },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
