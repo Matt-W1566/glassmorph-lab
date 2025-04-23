@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+    "d": "npm run build && npm run deploy"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
