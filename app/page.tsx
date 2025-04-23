@@ -16,7 +16,7 @@ export default function Home() {
         quality={100}
       />
 
-      <div className="flex flex-col xl:flex-row flex-wrap items-center justify-center w-full gap-16 xl:gap-30 px-4 lg:pt-10">
+      <div className="flex flex-col xl:flex-row flex-wrap items-center justify-center w-full gap-16 xl:pb-10 px-4 lg:pt-10">
         <Title />
 
         <section className="flex flex-col xl:flex-row w-full gap-16 justify-center items-center text-white font-bold text-4xl">
