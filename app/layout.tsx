@@ -1,6 +1,6 @@
-// app/layout.tsx
 import { Metadata } from "next";
 import localFont from "next/font/local";
+import Head from "next/head";
 import "./globals.css";
 
 const roboto = localFont({
@@ -37,6 +37,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="theme-color" content="#190f24" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+      </Head>
       <body className={`${roboto.variable} ${fira.variable} font-sans`}>
         {children}
       </body>
