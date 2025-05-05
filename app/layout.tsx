@@ -39,7 +39,6 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta name="theme-color" content="#190f24" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
           href="/icon?<generated>"
