@@ -22,7 +22,7 @@ export default function GlobalError({
 
         <div className="glass flex flex-col items-center justify-center z-10 !p-[28px] animate-float shimmer-border backdrop-blur-xl shadow-xl text-center">
           <h1 className="text-white text-4xl font-bold m-[14px]">
-            Something went wrong!
+            Something went wrong
           </h1>
           <p className="text-white/80 mb-6 text-sm">
             {error?.message || "Unexpected application error"}
